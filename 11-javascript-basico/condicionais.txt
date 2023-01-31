@@ -1,0 +1,112 @@
+Condicionais
+
+Podemos verificar se uma condição é verdadeira/falsa para executar um bloco de código ou não.
+
+Utilizamos a palavra if, passamos a condição nos parênteses () e abrimos o bloco com chaves {}.
+
+if (true) {
+  console.log('Código executado');
+}
+
+if (false) {
+  console.log('Não executado');
+}
+
+
+
+
+
+if/else
+Se a condição do if for falsa, o else que seguir será executado.
+
+if (false) {
+  console.log('Não executado');
+} else {
+  console.log('Código executado');
+}
+
+
+
+
+
+true/false
+Os valores de true/false são tipos de dados booleanos. Qualquer expressão pode ser transformada em um valor booleano.
+
+Quando passamos um valor nos parênteses após o if é como se usássemos a função Boolean() nele.
+
+const elemento = document.querySelector('body');
+const elementoNaoExiste = document.querySelector('article');
+console.log(Boolean(elemento));
+console.log(Boolean(elementoNaoExiste));
+
+const texto = 'JavaScript';
+const textoVazio = '';
+console.log(Boolean(texto));
+console.log(Boolean(textoVazio));
+
+const numero = 20;
+const numeroZero = 0;
+console.log(Boolean(numero));
+console.log(Boolean(numeroZero));
+
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+
+
+
+
+
+
+Operadores Lógicos
+Podemos verificar mais de uma condição com o || (ou) e && (e).
+
+// Todas precisam ser verdadeiras
+if (true && false) {
+  console.log('Não executa');
+}
+
+// Pelo menos uma precisa ser verdadeira
+if (true || false) {
+  console.log('Executa');
+}
+
+
+
+
+
+Operadores de Comparação
+Podemos comparar os tipos de dados, a comparação retorna um valor booleano.
+
+'JavaScript' === 'javascript'; // false
+'20' === 20; // false
+30 !== 20; // true
+document.querySelector('.texto') !== null; // false
+
+// Comparar números
+10 > 5; // true
+20 < 10; // false
+10 >= 10; // true
+20 <= 30; // true
+
+
+
+
+const elemento = document.querySelector("p");
+// p pegar o valor dentro do elemento:
+const texto = elemento.innerText;
+
+console.log(texto);
+
+if (texto.toUpperCase() === "HTML") {
+  console.log("Executar código");
+}
+
+// se 10 é diferente de "10" (string)
+if (10 !== "10") {
+  console.log("executou");
+}
+
+// nao funciona pq 10 nao é menor ou igual a 11
+if (10 >= 11) {
+  console.log("teste");
+}

@@ -1,0 +1,16 @@
+Especificidade
+A ordem do elemento só importa se eles possuírem a mesma especificidade. Caso contrário o seletor mais específico irá prevalecer.
+
+id
+(1, 0, 0) Primeiro nível.
+
+classes, atributos e pseudo classes
+(0, 1, 0) Segundo nível.
+
+elementos e pseudo elementos
+(0, 0, 1) Terceiro nível.
+
+
+
+!important
+Com o valor !important na frente do valor da propriedade, esta passa a ser mais relevante do que qualquer seletor existente. A não ser que exista duas propriedades iguais em seletores diferentes com o !important.

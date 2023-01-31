@@ -1,0 +1,31 @@
+* Tipos de Dados
+Existem diferentes tipos de dados no JavaScript. Os mais comuns são:
+
+- String
+- Number
+- Object
+- Array
+- Boolean
+- Null/Undefined
+
+* String
+A String guarda dados em formato de texto, geralmente colocada entre aspas simples '' ou duplas "". É possível concatenar (juntar) Strings com o sinal +
+
+
+* Number
+O Number guarda número inteiros 10 ou decimais 10.5
+
+let total = 0;
+
+const compras = 30;
+const imposto = 10;
+
+total = compras + imposto;
+console.log(total);
+
+const dobro = total * 2;
+const metade = total / 2;
+const desconto = total - 20;
+
+const strings = '20' + '20'; // 2020
+const numbers = 20 + 20; // 40

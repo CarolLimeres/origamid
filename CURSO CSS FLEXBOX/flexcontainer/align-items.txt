@@ -1,0 +1,20 @@
+6 • align-items
+O align-items alinha os flex itens de acordo com o eixo do container. O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+
+Essa propriedade permite o tão sonhado alinhamento central no eixo vertical, algo que antes só era possível com diferentes hacks.
+
+
+align-items: stretch;
+// Valor padrão, ele que faz com que os flex itens cresçam igualmente.
+
+align-items: flex-start;
+// Alinha os itens ao início.
+
+align-items: flex-end;
+// Alinha os itens ao final.
+
+align-items: center;
+// Alinha os itens ao centro.
+
+align-items: baseline;
+// Alinha os itens de acordo com a linha base da tipografia.

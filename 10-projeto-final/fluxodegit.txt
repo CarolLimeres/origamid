@@ -1,0 +1,9 @@
+fluxo de git p esse projeto:
+
+git add .  (p adicionar tudo, incluindo até qualquer elemento novo q criou)
+OU
+git add -u (só os updates)
+
+git commit -m 'nome-da-modificacao'
+
+git push

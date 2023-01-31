@@ -1,0 +1,21 @@
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  gap: 20px; /*p separar os itens, ou posso usar margin tb diretamente nas li's pq o gap pode nao funcionar*/
+}
+
+/*
+li {
+  margin: 0 10px; outra forma de espaçar os itens
+}
+*/
+
+a {
+  text-decoration: none;
+  background: #eee;
+  padding: 10px 20px;
+  display: block; /*o a por padrao é um elemento inline, pq o flex item é o li (filho direto de ul), por isso tem q colocar o a como display block ou inline-block*/
+  color: #000;
+}

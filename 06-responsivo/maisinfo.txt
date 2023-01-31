@@ -1,0 +1,3 @@
+* Qual media query eu devo utilizar?
+- os valores que utilizamos (ex: vai quebrar abaixo dos 1000px) sao chamados de breakpoints (pontos de quebra)
+-precisamos ver exatamente aonde o site quebra p definir o breakpoint (atraves do inspecionar elemento)

@@ -1,0 +1,52 @@
+Solucionar Problemas
+Quais elementos serão observados/modificados?
+
+Quais eventos serão observados?
+
+Quais informações dos elementos/browser precisamos?
+
+Quais informações dos elementos/browser serão alteradas?
+
+
+Galeria
+1 - Lista de imagens (li img) e a imagem principal.
+  1.1 Como selecionar uma lista de itens?
+  1.2 Como selecionar um item?
+
+2 - Clique em um dos itens da lista.
+  2.1 Como adicionar um evento de click a uma lista de itens?
+
+3 - Precisamos do url do item clicado.
+  3.1 Como pegar o url de um elemento?
+
+4 - Precisamos alterar o url da imagem principal.
+  4.1 Como alterar o url de um elemento?
+
+
+
+Solução
+
+// primeiro passo: qual elemento quero selecionar? quero selecionar a lista de imagens
+// querySelectorAll pq quero selecionar vários elementos, entao ele vai retornar uma lista
+const imagens = document.querySelectorAll("#galeria li img");
+
+// sempre conferir se está tudo certinho com o console.log:
+console.log(imagens);
+
+function galeriaTrocar(event) {
+  // quarto passo - preciso de uma forma de modificar a informação do item principal que quero modificar (no caso, a imagem maior, fora da li)
+  // se eu quero modificar um item, eu tenho que selecionar ele:
+  // apenas querySelector pq é uma imagem apenas
+  const principal = document.querySelector("#imagem-principal");
+  // terceiro passo - preciso tirar as informações que preciso:
+  // qual informação eu preciso quando clico em uma imagem? preciso do src dela
+  // ter acesso ao elemento que estou clicando:
+  // com o currentTarget quando clico ele me da a imagem exata que cliquei:
+  const clicada = event.currentTarget;
+  // p mudar o src e o alt da imagem (p deixar a q eu cliquei em evidencia na parte de baixo):
+  // outra forma de escrever o mesmo código (colocando manualmente o atributo que quero mudar pq as vezes pode nao aparecer): principal.setAttribute('alt', clicada.getAttribute('alt'))
+  principal.src = clicada.src;
+  principal.alt = clicada.alt;
+  // só colocando clicada.src ele ja me da o caminho da imagem
+  console.log(clicada.src);
+}

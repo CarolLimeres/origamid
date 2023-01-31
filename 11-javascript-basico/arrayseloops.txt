@@ -1,0 +1,210 @@
+Arrays
+Uma Array [] representa uma lista de dados. Para retornar um valor passamos o [index] na frente da variável, o index começa em 0.
+
+const lista = ['JavaScript', 'HTML', 'CSS'];
+
+console.log(lista);
+
+const js = lista[0];
+const html = lista[1];
+const css = lista[2];
+
+
+
+
+Tipos de Dados
+É possível colocar qualquer tipo de dado em uma array.
+
+const listaComplexa = [
+  { nome: 'André', sobrenome: 'Rafael' },
+  100,
+  'Mestre',
+  true,
+  [20, 30],
+];
+
+
+
+
+Loop
+Um loop pode ser utilizado para executar um código para cada item da array.
+
+const lista = ['JavaScript', 'HTML', 'CSS'];
+const body = document.querySelector('body');
+
+for (let index = 0; index < lista.length; index++) {
+  const item = lista[index];
+  body.innerHTML += '<li>' + lista[index] + '</li>';
+}
+
+
+
+
+
+forEach
+Arrays e objetos que se parecem com Array's, possuem o método forEach. Esse método recebe uma função que é executada para cada item da Array.
+
+const lista = ['JavaScript', 'HTML', 'CSS'];
+
+function logarItems(item, index) {
+  console.log(item, 'no index:', index);
+}
+
+lista.forEach(logarItems);
+
+// você pode escrever a função no argumento:
+lista.forEach(function (item, index) {
+  console.log(item, 'no index:', index);
+});
+
+
+
+
+querySelectorAll
+O método document.querySelectorAll(), seleciona todos os elementos que suprirem a condição do argumento e retorna uma array-like (objeto que se parece com uma array).
+
+const links = document.querySelectorAll('a');
+
+function logHref(item) {
+  const href = item.href;
+  console.log(href);
+}
+
+links.forEach(logHref);
+
+// Primeiro link
+console.log(links[0]);
+
+
+
+
+
+Métodos e Propriedades
+Uma Array possui diferentes métodos e propriedades.
+
+const lista = ['JavaScript', 'HTML', 'CSS'];
+
+// retorna o total
+const total = lista.length;
+
+// remove o último
+const ultimo = lista.pop();
+
+// remove o primeiros
+const primeiro = lista.shift();
+
+// adiciona ao final
+lista.push('PHP');
+
+console.log(lista);
+
+
+
+
+
+Array vs Array-like
+Um objeto Array-like não possui todos os métodos/propriedades de Array's, mas podemos transformar eles com a função Array.from().
+
+const links = Array.from(document.querySelectorAll('a'));
+
+// erro se não usar o Array.from
+links.pop();
+console.log(links);
+
+
+
+
+
+
+Arrays e Loops 1 (com for):
+
+const lista = ["JavaScript", "HTML", "CSS", "PHP"];
+
+// aqui retorna só "JavaScript":
+const nome = lista[0];
+
+console.log(nome);
+
+const body = document.querySelector("body");
+
+for (let i = 0; i < lista.length; i++) {
+  console.log(lista[i]);
+  // assim vai adicionar todos os itens da lista:
+  body.innerHTML += "<li>" + lista[i] + "</li>";
+}
+
+
+
+Arrays e Loops 2 (com forEach):
+
+const lista = ["JavaScript", "HTML", "CSS", "PHP"];
+const body = document.querySelector("body");
+
+// dentro dessa funçao eu tenho acesso a cada item da lista
+function adicionarBody(item) {
+  // quero adicionar os itens ao body:
+  // executou a função 4 vezes p mostrar os 4 itens
+  body.innerHTML += "<li>" + item + "</li>";
+}
+
+lista.forEach(adicionarBody);
+
+
+
+// com isso vai selecionar todos os links dentro da nav:
+// com o Array.from eu transformo a array like em uma array
+const links = Array.from(document.querySelectorAll("nav a"));
+
+console.log(links);
+// só consigo usar links.pop() aqui pq transformei a array like em uma array, sem isso nao funciona
+const ultimoLink = links.pop();
+console.log(links);
+
+// uma função p cada link
+function logHref(item) {
+  const href = item.href;
+  console.log(href);
+}
+
+// com o querySelectorAll (que transforma em uma array like) fica com características de array entao com isso da pra usar o forEach (pq vai ter os index e tudo)
+links.forEach(logHref);
+
+// p dar o ultimo item da array
+// coms os [] vc coloca a posiçao do array, como eu quero a ultima entao eu faço [links.length - 1] pq o length da o tamanho da array (que nesse caso seria 3, mas como o index da array começa sempre em 0, p achar a ultima posiçao sempre tenho q subtrair 1 pq o index so vai ate o 2, logo, a ultima posiçao é o 2)
+console.log(links[links.length - 1]);
+
+const lista = ["JavaScript", "HTML", "CSS"];
+
+// remove o ultimo item da array
+const ultimo = lista.pop();
+
+// remove o primeiro item da array
+const primeiro = lista.shift();
+
+// aqui vai mostrar o ultimo item, mas remove ele da array
+console.log(ultimo);
+// aqui vai mostrar o primeiro item, mas remove ele da array
+console.log(primeiro);
+
+// adiciona um item pra lista
+lista.push("PHP");
+console.log(lista);
+
+
+
+
+
+
+
+
+Exercício
+1 - Adicione uma navegação (nav) com 3 links: ./, ./produto.html e ./contato.html
+2 - Crie as páginas produto.html e contato.html com o mesmo html de index.html
+3 - Selecione os links na navegação.
+4 - Para cada link execute uma função (ativarLink);
+5 - Na função, extraia o href do elemento.
+6 - Verifique se o href é igual ao URL da página (document.location.href)
+7 - Se for igual mude o backgroundColor para black e a color para white do link.
+
+
+

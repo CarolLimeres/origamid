@@ -1,0 +1,65 @@
+* Objetos
+Um objeto (Object) é uma forma de matermos dados associados e organizados. Ele é criado com chaves {}. "Tudo é objeto", vocês já vão ver o motivo.
+
+
+const nomeFilme = 'O Senhor dos Anéis';
+const anoFilme = 2001;
+const diretorFilme = 'Peter Jackson';
+
+const livro = {
+  nome: 'O Senhor dos Anéis',
+  ano: 1954,
+  autor: 'J. R. R. Tolkien',
+};
+
+const filme = {
+  nome: 'O Senhor dos Anéis',
+  ano: 2001,
+  diretor: 'Peter Jackson',
+};
+
+console.log(livro);
+console.log(livro.nome);
+console.log(livro.ano);
+
+console.log(filme);
+console.log(filme.diretor);
+
+
+* Tudo é Objeto
+No JavaScript, praticamente todo tipo de dado é construindo através de uma função que cria objetos por baixo dos panos. Até quando escrevemos console.log(), estamos acessando o método log() do objeto console.
+
+
+const nomeMaiusculo = nome.toUpperCase();
+const totalLetras = nome.length;
+
+console.log(nomeMaiusculo);
+console.log(totalLetras);
+
+const preco = 2.99;
+const precoArredondado = 'R$ ' + preco.toFixed();
+
+console.log(precoArredondado);
+
+
+
+js
+
+const texto = document.querySelector('p');
+console.dir(texto);
+
+console.log(texto.innerText);
+console.log(texto.classList);
+
+// texto é um objeto, classList é um objeto e add é um método de classList
+texto.classList.add('bg-1');
+
+
+html
+
+<p class="font-1 cor-1">Curso de JavaScript</p>
+
+
+
+
+

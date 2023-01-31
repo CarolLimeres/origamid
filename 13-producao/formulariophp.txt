@@ -1,0 +1,135 @@
+Produção
+Formulário PHP
+
+Envio de Email
+O envio de email depende de uma linguagem de back end. A maioria dos servidores básicos já vem com PHP instalado, por isso vamos utilizar o mesmo.
+
+PHPMailer
+É um plugin que garante um envio mais efetivo/seguro de emails via PHP. https://github.com/PHPMailer/PHPMailer
+
+
+
+PHP
+
+Faça primeiro um teste para ver se o seu servidor possui o PHP instalado.
+Crie um arquivo chamado enviar.php na raiz do site e coloque o código abaixo.
+
+<?php
+
+echo "Funcionou";
+
+?>
+
+
+
+
+Script Teste
+Esse script irá testar se o envio e conexão SMTP estão funcionando.
+
+<?php
+
+$email = "";
+$senha = "";
+
+$smtp = "smtp.titan.email";
+$porta = 465;
+
+$email_contato = "teste@bikcraft.net";
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require "./PHPMailer/src/Exception.php";
+require "./PHPMailer/src/PHPMailer.php";
+require "./PHPMailer/src/SMTP.php";
+
+$mail = new PHPMailer(true);
+
+try {
+  $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+  $mail->isSMTP();
+  $mail->Host       = $smtp;
+  $mail->SMTPAuth   = true;
+  $mail->Username   = $email;
+  $mail->Password   = $senha;
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+  $mail->Port       = $porta;
+  $mail->CharSet    = "utf-8";
+
+  //Recipients
+  $mail->setFrom($email, "Formulário");
+  $mail->addAddress($email, "Formulário");
+  $mail->addReplyTo($email_contato);
+
+  $mail->isHTML(true);
+  $mail->Subject = "Formulário Email";
+  $mail->Body    = "Corpo da Mensagem";
+
+  $mail->send();
+  echo "<h1>Mensagem enviada.</h1>";
+} catch (Exception $e) {
+  echo "<h1>Erro, mensagem não enviada.</h1>";
+}
+
+
+
+
+
+Script Final
+<?php
+
+$email = "";
+$senha = "";
+
+$smtp = "smtp.titan.email";
+$porta = 465;
+
+$body = "";
+foreach($_POST as $label => $value) {
+  $body .=  filter_var($label, FILTER_SANITIZE_STRING)
+  . ": "
+  . filter_var($value, FILTER_SANITIZE_STRING) . "<br>";
+}
+
+$email_contato = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+$email_valid = filter_var($email_contato, FILTER_VALIDATE_EMAIL);
+
+if(!$email_valid) {
+  throw new Exception('Email inválido');
+}
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require "./PHPMailer/src/Exception.php";
+require "./PHPMailer/src/PHPMailer.php";
+require "./PHPMailer/src/SMTP.php";
+
+$mail = new PHPMailer(true);
+
+try {
+  // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+  $mail->isSMTP();
+  $mail->Host       = $smtp;
+  $mail->SMTPAuth   = true;
+  $mail->Username   = $email;
+  $mail->Password   = $senha;
+  $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+  $mail->Port       = $porta;
+  $mail->CharSet    = "utf-8";
+
+  //Recipients
+  $mail->setFrom($email, "Formulário");
+  $mail->addAddress($email, "Formulário");
+  $mail->addReplyTo($email_contato);
+
+  $mail->isHTML(true);
+  $mail->Subject = "Formulário Email";
+  $mail->Body    = $body;
+
+  $mail->send();
+  echo "<h1>Mensagem enviada.</h1>";
+} catch (Exception $e) {
+  echo "<h1>Erro, mensagem não enviada.</h1>";

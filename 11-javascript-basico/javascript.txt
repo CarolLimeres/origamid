@@ -1,0 +1,36 @@
+* JavaScript
+
+* Manipular o DOM (Document Object Model)
+Remover elementos, adicionar classes, modificar conteúdo e mais.
+
+* Puxar Dados Externos
+Acessar API's externas para puxar ou escrever dados.
+
+JavaScript Completo
+https://www.origamid.com/curso/javascript-completo-es6/
+
+
+* Adicionar JavaScript
+
+A ordem importa, geralmente colocamos antes do fechamento da tag </body>
+
+<script>
+  console.log('Funciona');
+</script>
+<script src="./js/script.js"></script>
+
+
+* Variáveis
+Guardam um valor na memória e permitem a reutilização do mesmo. Três formas de declarar const, let e var. Usamos mais const (nao permite redefinir o valor de uma variável ja criada) e let (permite redefinir o valor da variável).
+
+const curso = 'JavaScript';
+
+let total = 10;
+total = 20;
+
+console.log(curso);
+console.log(total);
+
+
+* console.log()
+Permite debugarmos o JavaScript, mostrando o valor passado entre os () no Console do browser.

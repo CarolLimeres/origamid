@@ -1,0 +1,20 @@
+Responsivo
+max-width
+
+
+max-width
+O max-width determina um valor máximo de largura do elemento. Não deixe os elementos livres na tela, principal os textos.
+
+ch
+Unidade relacionada à largura do caractere 0 da tipografia.
+
+Largura do texto
+Controlar o tamanho máximo da largura do texto é essencial para garantir uma boa leiturabilidade. Para corpo de texto entre 50-75 caracteres é o ponto ideal.
+
+margin: 0 auto;
+margin top e bottom 0. margin left e right auto (automática, define valores iguais com base no espaço em branco e alinha o conteúdo ao centro).
+
+
+
+* código muito comum de ser usado p alinhar um conteudo que a gente define o maximo de width ao centro da tela : margin: 100px auto; ou
+margin: 0 auto;

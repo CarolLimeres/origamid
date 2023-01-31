@@ -1,0 +1,37 @@
+Considerações Finais
+HTML e CSS para Iniciantes Conclusão
+
+Próximas Etapas
+
+Praticar
+Não tem como aprender apenas com os cursos
+
+Aprender mais
+Esse é apenas o início
+
+Ter calma
+O aprendizado será demorado, mas vale a pena
+
+
+
+
+
+Outros Cursos
+
+CSS Flexbox
+https://www.origamid.com/curso/css-flexbox/
+
+CSS Grid Layout
+https://www.origamid.com/curso/css-grid-layout/
+
+JavaScript Completo
+https://www.origamid.com/curso/javascript-completo-es6/
+
+React Completo
+https://www.origamid.com/curso/react-completo/
+
+
+Não aprendi nada
+
+Não consigo criar nada do zero após terminar o curso.
+https://www.youtube.com/watch?v=Kog9W5liEUk

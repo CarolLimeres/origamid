@@ -1,0 +1,13 @@
+ctrl + a = selecionar tudo
+ctrl + shift + p = configuraçoes
+alt + seta p cima ou p baixo = pode ir andando com uma linha
+selecionar uma palavra + ctrl d = vai selecionando todas as palavras iguais e pode apagar todas de uma vez, modificar, etc
+ctrl + b = tirar o explorador
+windows + seta p direita p deixar as duas telas (chrome e code)
+
+html 5 + tab = ja da toda a estrutura
+
+
+ctrl + p + @ = procurar algum elemento específico
+
+ctrl + f = busca por algum elemento

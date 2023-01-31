@@ -1,0 +1,19 @@
+img {
+  max-width: 100%; /* p as imagens pararem de expandir */
+  display: block;
+}
+
+#galeria {
+  max-width: 600px; /* p manter ela pequena ali no centro */
+  margin: 0 auto; /* assim fica sempre no centro */
+}
+
+#galeria ul {
+  padding: 0px;
+  margin: 0px; /* p resetar padding e margin que vem como padrão em ul */
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  gap: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,17 @@
+JavaScript Básico
+
+* Manipular DOM
+
+document.querySelector
+Seleciona o primeiro elemento que econtrar, com base no argumento passado. O argumento é similar aos seletores CSS, dentro de aspas: document.querySelector('.classe tag');
+
+Element
+O retorno do querySelector é um objeto do tipo Element. Esse objeto possui diferentes métodos e propriedades que permitem manipularmos o mesmo.
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element
+
+
+
+
+* Diferença do JavaScript pro CSS:
+com o JavaScript eu posso fazer manipulações de estilos baseado em ações do usuário

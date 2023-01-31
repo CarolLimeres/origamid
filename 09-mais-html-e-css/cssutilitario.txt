@@ -1,0 +1,10 @@
+CSS Utilitário
+Uso de classes com propriedades pré-definidas, geralmente utilizado em bibliotecas de CSS como Bootstrap e Tailwind.
+
+
+Bibliotecas
+Bootstrap
+https://getbootstrap.com/
+
+Tailwind
+https://tailwindcss.com/

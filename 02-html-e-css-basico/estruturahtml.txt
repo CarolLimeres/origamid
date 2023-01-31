@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+Indica o tipo de documento (html, xhtml e outros)
+
+<html>
+Representa a raiz do documento, é a tag que envolve todo o documento.
+
+<head>
+Informações gerais para o browser. Título, descrição e outras.
+
+<title>
+Título do documento.
+
+<meta>
+Dados extras sobre o documento.
+
+<body>
+Conteúdo do site, aqui escrevemos toda a estrutura do documento.

@@ -1,0 +1,90 @@
+Mais HTML e CSS
+Formulários
+
+form
+
+
+form
+A tag form é utilizada para envolver os campos de um formulário.
+
+action=""
+O atributo action indica o arquivo/url que será ativado ao enviarmos o formulário.
+
+method=""
+POST (envio de informações) e GET (busca de informações).
+
+
+
+
+input
+
+input
+Campo mais comum de formulário, possui diferentes tipos.
+
+type=""
+Define o tipo. text, checkbox, radio, email, file e outros.
+
+name=""
+Define um nome único para o formulário. É utilizado pelo JavaScript ou Back End para puxarmos o valor do campo do formulário.
+
+label
+Define o rótulo do formulário. for="" relaciona a label e o id="" do formulário.
+
+
+
+button
+
+button
+Cria um botão, utilizado para diferentes interações na página.
+
+form > button
+Button dentro de form envia/ativa a action do form.
+
+
+
+Atributos
+
+placeholder=""
+Texto quando o formulário não está preenchido. (dica de preenchimento)
+
+required
+Define o input como obrigatório.
+
+disabled
+Desabilita o input.
+
+minlength e maxlength
+Mínimo e máximo de caracteres.
+
+value
+Valor inicial do formulário.
+
+
+
+checkbox e radio
+
+checkbox
+Caixa que pode ser marcada/desmarcada.
+
+radio
+Grupo de inputs com base no mesmo name, apenas um pode ser selecionado.
+
+
+
+select
+
+select
+Campo de seleção com diferentes opções (option).
+
+option
+Opções do campo de seleção.
+
+
+
+textarea
+
+textarea
+Área de texto, para valores que ocupem mais de uma linha.
+
+rows=""
+Indica o tamanho de linhas visíveis.

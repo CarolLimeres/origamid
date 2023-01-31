@@ -1,0 +1,10 @@
+align-items e justify-items
+
+align-items: start | center | end | stretch
+Alinha os items na horizontal.
+
+justify-items: start | center | end | stretch
+Alinha os items na vertical.
+
+place-items: align justify
+Atalho para align-items e justify-items

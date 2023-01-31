@@ -1,0 +1,17 @@
+Acesso ao Servidor
+
+SFTP
+Uso de login/senha para acessar a pasta do servidor. Podemos usar um programa como: https://cyberduck.io/ para facilitar o acesso.
+
+SSH
+Acesso pela linha de comando, usando chave ou não.
+
+Acesso SFTP
+
+SFTP
+ftp.bikcraft.net
+
+Porta
+22
+
+Usuário e Senha

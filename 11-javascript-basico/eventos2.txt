@@ -1,0 +1,72 @@
+* Interação
+O poder do JavaScript está na manipulação do DOM através de eventos executados pelo usuário. Um comum seria a adição/remoção de uma classe.
+
+
+JavaScript
+
+// no JavaScript eu sempre tenho que selecionar os elementos
+const botao = document.querySelector(".botao");
+
+function mostrar() {
+  // sempre selecionar o elemento primeiro, se eu quero modificar algo desse elemento sempre tenho que selecionar ele primeiro
+  const texto = document.querySelector(".texto");
+  // nesse texto eu agora tenho que utilizar alguma classe, algum método p conseguir adicionar e remover a classe
+  // classList é um objeto pq tem métodos nele
+  // o toggle adiciona o ativar, caso nao exista, e se ja existe ele remove
+  texto.classList.toggle("ativar");
+}
+
+// quero adicionar um evento p esse botão
+// evento de click (nesse caso)
+// dps tenho que passar a função (callback) oq vai acontecer quando clica
+botao.addEventListener("click", mostrar);
+
+
+CSS
+
+/* quando nao tiver a classe ativar, só no texto, ele fica como display none, ou seja, tira o item totalmente da tela */
+.texto {
+  display: none;
+}
+
+/* quando tiver a classe texto e a classe ativar ele coloca como display block */
+.texto.ativar {
+  display: block;
+}
+
+
+
+* window
+O window é um objeto que representa a janela do browser e contém todo o dom. Esse objeto além de possuir diversas propriedades e métodos com informações sobre a página, pode também receber eventos globais.
+
+
+// deixando essa propriedade (innerWidth) em uma variável, eu tenho sempre uma referência da largura da tela p quando eu quiser essa largura, caso eu queira aumentar um elemento ou diminuir de acordo com a largura...
+const alturaTela = window.innerHeight;
+const larguraTela = window.innerWidth;
+console.log(alturaTela);
+console.log(larguraTela);
+
+// onde q ta esse evento? onde posso ver a coordenada? no (event)
+function coordenadaMouse(event) {
+  const coordenadas = {
+    x: event.x,
+    y: event.y,
+  };
+  console.log(coordenadas);
+}
+
+// posso tb adicionar eventos nele
+window.addEventListener('mousemove', coordenadaMouse);
+// mousemove é o evento de vc mover o mouse na tela
+// função coordenadaMouse p ver exatamente onde o mouse ta na tela
+
+function scroll() {
+  console.log(window.pageYOffset);
+}
+
+function scroll() {
+  console.log(window.scrollY);
+  // pra dar a distancia do scroll e do topo
+}
+
+window.addEventListener('scroll', scroll);

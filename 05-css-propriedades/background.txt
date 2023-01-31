@@ -1,0 +1,20 @@
+CSS Propriedades
+Background
+
+Background
+O background pode receber outros valores além de cores sólidas, como imagens e gradientes. A diferença entre img e o background é que a img faz parte do conteúdo, o background apenas do estilo.
+
+
+
+Gradiente
+A função linear-gradient gera um gradiente linear na propriedade background-image.
+
+Direção
+90deg, 45deg, to left, to right
+
+Cores
+#000 0%, blue 50%, #fff 100%. Cor e local de início.
+
+
+
+quando uso só o background sozinho, ele é um atalho pra todas as propriedades (background-color, background-image...) entao se escrevo só background e começo a inserir as coisas depois, esse atalho escreve por cima do q escrevi antes

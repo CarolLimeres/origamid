@@ -1,0 +1,31 @@
+Mais HTML e CSS
+Outros Seletores
+
+
+
+Atributos
+
+[atributo]
+Seleciona os elementos que tiverem o atributo dentro dos [].
+
+[name="email"]
+Seleciona apenas o elemento que tiver o atributo e o valor.
+
+[href^="#"]
+Atributos que comecem ^ com o valor.
+
+[href$=".com"]
+Atributos que terminem $ com o valor.
+
+
+
+Sinais
+
+div > p
+Apenas p que for filho direto de div
+
+p + p
+Todo p que vier após um elemento p
+
+*
+Seleciona todos os elementos do site.

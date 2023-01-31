@@ -1,0 +1,54 @@
+Produção
+Hospedagem
+
+Domínio
+É o endereço do seu site e como as pessoas te acham na web.
+
+Dicas
+Pequeno, memorável e relacionado a marca.
+
+Extensões
+.com, .com.br, .io e outras
+
+Registro
+Verificar disponibilidade em: https://domains.google.com/ e registrar na hospedagem contratada.
+
+
+
+
+Hospedagem
+Aluguel de um computador conectado 24 horas (servidor) na internet.
+
+Disponibilidade
+Garantir o maior tempo possível o site no ar.
+
+Custo
+O menor custo possível para suprir as necessidades do projeto.
+
+Suporte
+Ter suporte rápido e fácil é fundamental.
+
+
+
+SSL
+Certificado que permite o uso do protocolo https.
+
+Criptografia
+
+Garante que as informações enviadas do usuário para um servidor, sejam criptografadas.
+
+Gratuito
+
+Let's encrypt é uma organização responsável por assinar certificados ssl gratuitos. Procure sempre uma hospedagem que ofereça os mesmos.
+
+
+
+Passos
+Esperar até 48h (DNS)
+
+Configurar o SSL
+
+Forçar Redirecionamento HTTPS
+
+Pegar os dados de acesso ao FTP
+

@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  background: #f7f7f7;
+  display: grid;
+  gap: 60px; /*body é o elemento pai e o grid vai afetar os filhos diretos*/
+  justify-items: center;
+  margin-top: 60px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0px; /*css reset, p tirar todos os estilos que vem como padrao*/
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.3; /*p distanciar as linhas do texto*/
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap /*p quebrar o menu*/;
+  gap: 20px; /*p dar espaço entre os itens*/
+  justify-content: center; /*toda vez q quebrar, quebrar ao centro*/
+}
+
+.menu a {
+  background: #ffffff;
+  padding: 15px /*p cima e p baixo*/ 30px /*de um lado p outro*/;
+  border-radius: 4px;
+  color: #000000;
+  text-transform: uppercase; /*transformar o texto em letra maiuscula*/
+}
+
+.conteudo {
+  display: grid; /*p dividir o conteudo em duas colunas*/
+  grid-template-columns: 1fr 1fr; /**duas colunas do mesmo tamanho*/
+  max-width: 1000px; /*definir um tamanho limite p conteudo, graças a isso o conteudo tem espaço para alinhar ao centro, como foi definido no body, pq so consegue alinhar qnd tem espaço sobrando*/
+}
+
+.introducao {
+  background: #fff;
+  padding: 40px; /*desgrudar elementos da ponta, margem interna*/
+  text-align: right; /*alinhar o texto a direita*/
+  position: relative; /*introducao é o elemento pai do .detalhe, serve p o position absolute do .detalhe*/
+  display: grid; /*p tirar o display inline, no caso, o botao inline tava passando por cima do texto*/
+  /*por padrao, tenta ocupar o maximo que conseguir da altura e da largura do elemento q ta inserido, padrao de esticar*/
+  gap: 20px; /*p separar o conteudo*/
+  align-content: center; /*p centralizar o conteudo em relacao a foto*/
+  justify-items: end; /*p alinhar os elementos no canto... p deixar de pegar ponta a ponta, deixar de fazer o botao ficar ponta a ponta*/
+}
+
+.detalhe {
+  width: 60px; /*largura*/
+  height: 4px; /*altura*/
+  background: #e21;
+  position: absolute; /*pegar um elemento e sair do fluxo normal dele, p tirar o elemento completamente da area, p nao influenciar em nada nos outros elementos*/
+
+  /*o position absolute vai ser sempre em relacao ao body, caso o elemento pai nao tenha nenhum posicionamento diferente*/
+  top: 30px; /*em relacao ao posicionamento q ta (elemento pai .introducao)*/
+  right: -30px; /*em valor negativo p jogar mais p fora da coluna que ta*/
+}
+
+.botao {
+  background: #e21;
+  color: #fff;
+  padding: 15px /*top, bottom*/ 30px /*left, right*/;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.subtitulo {
+  font-size: 64px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  padding: 40px; /*desgrudar os elementos do canto*/
+  align-self: center; /*p deixar de alinhar ao centro da linha do css grid layout, essa propriedade serve p alinhar só esse item ao centro, p falar com o elemento dentro do grid */
+}
+
+.vantagens {
+  background: #fff;
+  padding: 40px; /*p desgrudar do canto*/
+}
+
+.vantagens-item {
+  display: grid; /*p dividir em duas colunas, uma p imagem e outra p titulo e conteudo*/
+  grid-template-columns: auto /*p pegar exatamente o tamanho do conteudo, no caso, a coluna ta o tamanho exato do icone, se os icones tivessem tamanhos diferentes poderia colocar outro valor para padronizar*/ 1fr /*p distribuir o qnt sobrar*/;
+  gap: 10px /*distancia entre as linhas*/ 20px /*distancia entre colunas*/;
+  padding: 20px;
+}
+
+.vantagens-item p {
+  grid-column: 2; /*p colocar esse conteudo exatamente na coluna que eu quero*/
+}
+
+.rodape {
+  background: #fff;
+  width: 100%; /*p expandir de ponta a ponta, sem isso tava fazendo o conteudo ter so o maximo do tamanho do conteudo dele, por causa do grid definido no body*/
+  text-align: center;
+  padding: 40px;
+  box-sizing: border-box; /*p respeitar apenas o tamanho do width, p nao estourar e criar a barra embaixo*/
+}
